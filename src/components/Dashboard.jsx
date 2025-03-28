@@ -79,7 +79,7 @@ const Dashboard = () => {
         {/* Top metrics row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Steps card */}
-          <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(139,92,246,0.15)] transition-shadow duration-300">
+          <div className="bg-gradient-to-br from-[#2a7e35] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(139,92,246,0.15)] transition-shadow duration-300">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-sm font-medium text-gray-400">Daily Steps</p>
@@ -111,7 +111,7 @@ const Dashboard = () => {
           </div>
 
           {/* Calories card */}
-          <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(244,114,182,0.15)] transition-shadow duration-300">
+          <div className="bg-gradient-to-br from-[#2a7e35] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(244,114,182,0.15)] transition-shadow duration-300">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-sm font-medium text-gray-400">Calories Burned</p>
@@ -143,7 +143,7 @@ const Dashboard = () => {
           </div>
 
           {/* Heart rate card */}
-          <div className="bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(244,114,182,0.15)] transition-shadow duration-300">
+          <div className="bg-gradient-to-br from-[#2a7e35] to-[#0F172A] rounded-xl shadow-lg border border-[#334155] p-5 hover:shadow-[0_8px_30px_rgba(244,114,182,0.15)] transition-shadow duration-300">
             <div className="flex items-center justify-between mb-4">
               <div>
                 <p className="text-sm font-medium text-gray-400">Heart Rate</p>
@@ -183,8 +183,8 @@ const Dashboard = () => {
                   <LineChart data={activityData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                     <XAxis dataKey="name" tick={{fontSize: 12}} stroke="#64748B" />
-                    <YAxis yAxisId="left" stroke="#8B5CF6" tickFormatter={(value) => `${value}`} tick={{fontSize: 12}} />
-                    <YAxis yAxisId="right" orientation="right" stroke="#F472B6" tickFormatter={(value) => `${value}`} tick={{fontSize: 12}} />
+                    <YAxis yAxisId="left" stroke="#7DFF8A" tickFormatter={(value) => `${value}`} tick={{fontSize: 12}} />
+                    <YAxis yAxisId="right" orientation="right" stroke="#FFB703" tickFormatter={(value) => `${value}`} tick={{fontSize: 12}} />
                     <Tooltip 
                       contentStyle={{ 
                         backgroundColor: '#1E293B', 
@@ -193,8 +193,8 @@ const Dashboard = () => {
                       }} 
                       labelStyle={{ color: 'white' }}
                     />
-                    <Line yAxisId="left" type="monotone" dataKey="steps" stroke="#8B5CF6" strokeWidth={3} dot={{ fill: '#8B5CF6', r: 5 }} activeDot={{ r: 7 }} />
-                    <Line yAxisId="right" type="monotone" dataKey="calories" stroke="#F472B6" strokeWidth={3} dot={{ fill: '#F472B6', r: 5 }} activeDot={{ r: 7 }} />
+                    <Line yAxisId="left" type="monotone" dataKey="steps" stroke="#7DFF8A" strokeWidth={3} dot={{ fill: '#8B5CF6', r: 5 }} activeDot={{ r: 7 }} />
+                    <Line yAxisId="right" type="monotone" dataKey="calories" stroke="#FFB703" strokeWidth={3} dot={{ fill: '#F472B6', r: 5 }} activeDot={{ r: 7 }} />
                   </LineChart>
                 </ResponsiveContainer>
               </div>
